@@ -1,38 +1,142 @@
 .App {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  padding: 0;
+}
+
+.box {
+  display: block;
+  max-width: 600px;
+  margin: 40px auto;
+  border: 2px solid rgb(45, 23, 56);
+  border-radius: 5px;
+  box-shadow: 1px 6px 15px rgba(0, 0, 0, 0.7);
+  background: radial-gradient(
+    rgba(255, 255, 255, 0.863) 0%,
+    rgba(221, 216, 231, 0.753) 70%,
+    rgba(176, 162, 197, 0.908) 90%
+  );
+  padding-bottom: 15px;
+}
+
+p {
+  width: auto;
+  height: auto;
+  border: 2px dotted #643b7f;
+  background-color: #8d759c63;
+  margin: 5px 20px;
+  font-size: 15px;
+  border-radius: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.code_link {
+  color: #3a2257;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.code_link:hover {
+  color: rgba(17, 16, 17, 0.573);
+}
+
+@media screen and (max-width: 610px) {
+  ul {
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-around;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .box {
+    width: 95%;
+    height: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .city_condition {
+    width: 100%;
+    text-align: center;
+  }
+
+  .location_border {
+    padding: 15px;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .current_temperature_icon {
+    padding-top: 13px;
+    padding-left: 15px;
+  }
+
+  .search {
+    margin-bottom: 0;
+  }
+
+  .search_bar {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  .buttons {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .temperature_and_icon {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+  }
+
+  .current_temperature {
+    font-size: 60px;
+  }
+
+  .temp_icon_border {
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .temp_icon {
+    padding: 5px 0 0 25px;
+    display: block;
+    margin: 0 auto;
+    max-width: 220px;
+    max-height: 100px;
+  }
+
+  .current_temperature_icon {
+    left: -10px;
+    top: -21px;
+  }
+
+  .current_units {
+    position: relative;
+    top: -29px;
+    left: 5px;
+    font-size: 19px;
+  }
+
+  .current_indicators {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .indicators_border {
+    margin: 10px 25px;
+    border-radius: 20px;
+  }
+
+  .forecast_temperatures {
+    display: block;
   }
 }

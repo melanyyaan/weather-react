@@ -1,0 +1,101 @@
+h1 {
+  font-size: 35px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h2 {
+  line-height: 1;
+  font-weight: 300;
+  font-size: 22px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 22px;
+}
+
+ul {
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+  font-size: 17px;
+}
+
+img {
+  padding-top: 10px;
+  padding-left: 15px;
+  width: 80px;
+  height: 70px;
+}
+
+.current_city:first-letter {
+  text-transform: uppercase;
+}
+
+.current_condition:first-letter {
+  text-transform: uppercase;
+}
+
+.current_location {
+  padding: 10px 30px;
+}
+
+.city_condition {
+  padding-top: 10px;
+}
+
+.temperature_and_icon {
+  padding: 10px 10px 5px 20px;
+}
+
+.location_border,
+.temp_icon_border,
+.indicators_border {
+  width: auto;
+  height: auto;
+  border: 2px dotted #643b7f;
+  background-color: #8d759c63;
+}
+
+.current_temperature_icon {
+  position: relative;
+  top: -22px;
+  left: -5px;
+}
+
+.location_border {
+  padding: 15px 20px;
+  border-radius: 30px;
+}
+
+.temp_icon_border {
+  border-radius: 30px;
+}
+
+.indicators_border {
+  border-radius: 25px;
+  margin-top: 10px;
+}
+
+.temp_icon {
+  max-height: 100px;
+  padding: 0 0 0 30px;
+}
+
+.current_temperature {
+  font-size: 65px;
+  font-weight: 400;
+}
+
+.current_units {
+  position: relative;
+  top: -29px;
+  left: 3px;
+  font-size: 25px;
+  opacity: 0.8;
+}
+
+.current_indicators {
+  padding: 5px 20px;
+}
