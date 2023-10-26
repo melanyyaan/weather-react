@@ -1,0 +1,30 @@
+.Forecast {
+  margin: 15px 20px;
+  text-align: center;
+}
+
+.forecast_date {
+  margin-bottom: -8px;
+  font-size: 17px;
+  opacity: 0.8;
+}
+
+.forecast_icon {
+  padding: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.forecast_temperatures {
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+}
+
+.forecast_temp_max {
+  font-weight: 500;
+}
+
+.forecast_temp_min {
+  opacity: 0.8;
+}

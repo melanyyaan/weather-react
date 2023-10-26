@@ -1,6 +1,7 @@
 import "./App.css";
 import Form from "./Form";
 import Current from "./Current";
+import Forecast from "./Forecast";
 
 function App() {
   return (
@@ -9,18 +10,19 @@ function App() {
         <div className="box">
           <Form />
           <Current />
-          <p>
-            <a
-              href="https://github.com/melanyyaan/weather-app"
-              target="_blank"
-              rel="noreferrer"
-              className="code_link"
-            >
-              Open-source code
-            </a>
-            &nbsp;by Milana Tsybulina
-          </p>
+          <Forecast />
         </div>
+        <p>
+          <a
+            href="https://github.com/melanyyaan/weather-react"
+            target="_blank"
+            rel="noreferrer"
+            className="code_link"
+          >
+            Open-source code
+          </a>
+          &nbsp;by Milana Tsybulina
+        </p>
       </div>
     </div>
   );
