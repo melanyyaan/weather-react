@@ -1,5 +1,4 @@
 import "./App.css";
-import Form from "./Form";
 import Current from "./Current";
 import Forecast from "./Forecast";
 
@@ -8,8 +7,7 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="box">
-          <Form />
-          <Current />
+          <Current defaultCity="Cologne" />
           <Forecast />
         </div>
         <p>
