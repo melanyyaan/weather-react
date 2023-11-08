@@ -24,9 +24,9 @@ ul {
 
 img {
   padding-top: 10px;
-  padding-left: 15px;
-  width: 70px;
-  height: 70px;
+  padding-left: 10px;
+  width: 100px;
+  height: 100px;
 }
 
 .search {
@@ -92,7 +92,7 @@ img {
 .current_temperature_icon {
   position: relative;
   top: -22px;
-  left: -5px;
+  left: -10px;
 }
 
 .location_border {
@@ -111,7 +111,7 @@ img {
 
 .temp_icon {
   max-height: 100px;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 35px;
 }
 
 .current_temperature {

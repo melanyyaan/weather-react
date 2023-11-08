@@ -16,7 +16,7 @@ export default function Current(props) {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      iconUrl: "https://cdn-icons-png.flaticon.com/512/3222/3222791.png",
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
 
