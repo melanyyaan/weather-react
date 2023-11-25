@@ -1,83 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Forecast.css";
+import axios from "axios";
+import ForecastDay from "./ForecastDay";
 
-export default function Forecast() {
+export default function Forecast(props) {
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
+
+  function handleResponse(response) {
+    setLoaded(true);
+    setForecast(response.data.daily);
+  }
+
+  if (loaded) {
     return (
       <div className="Forecast">
         <div className="row">
           <div className="col">
-            <div className="forecast_date">Wed</div>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/3222/3222791.png"
-              alt="Weather icon"
-              className="forecast_icon"
-            />
-            <div className="forecast_temperatures">
-              <span className="forecast_temp_max">15°</span>
-              <span className="forecast_temp_min">4°</span>
-            </div>
-          </div>
-          <div className="col">
-            <div className="forecast_date">Thu</div>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/3222/3222791.png"
-              alt="Weather icon"
-              className="forecast_icon"
-            />
-            <div className="forecast_temperatures">
-              <span className="forecast_temp_max">11°</span>
-              <span className="forecast_temp_min">5°</span>
-            </div>
-          </div>
-          <div className="col">
-            <div className="forecast_date">Fri</div>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/3222/3222791.png"
-              alt="Weather icon"
-              className="forecast_icon"
-            />
-            <div className="forecast_temperatures">
-              <span className="forecast_temp_max">17°</span>
-              <span className="forecast_temp_min">6°</span>
-            </div>
-          </div>
-          <div className="col">
-            <div className="forecast_date">Sat</div>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/3222/3222791.png"
-              alt="Weather icon"
-              className="forecast_icon"
-            />
-            <div className="forecast_temperatures">
-              <span className="forecast_temp_max">12°</span>
-              <span className="forecast_temp_min">3°</span>
-            </div>
-          </div>
-          <div className="col">
-            <div className="forecast_date">Sun</div>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/3222/3222791.png"
-              alt="Weather icon"
-              className="forecast_icon"
-            />
-            <div className="forecast_temperatures">
-              <span className="forecast_temp_max">14°</span>
-              <span className="forecast_temp_min">6°</span>
-            </div>
-          </div>
-          <div className="col">
-            <div className="forecast_date">Mon</div>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/3222/3222791.png"
-              alt="Weather icon"
-              className="forecast_icon"
-            />
-            <div className="forecast_temperatures">
-              <span className="forecast_temp_max">15°</span>
-              <span className="forecast_temp_min">6°</span>
-            </div>
+            <ForecastDay data={forecast[0]} />
           </div>
         </div>
       </div>
     );
+  } else {
+    const apiKey = "743bee57fddbfaf52447193a87d5dd25";
+    let longitude = props.coords.lon;
+    let latitude = props.coords.lat;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(handleResponse);
+    return null;
+  }
 }

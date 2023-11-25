@@ -3,6 +3,7 @@ import axios from "axios";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
 import "./Current.css";
+import Forecast from "./Forecast";
 
 export default function Current(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -12,6 +13,7 @@ export default function Current(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
+      coords: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
@@ -91,6 +93,7 @@ export default function Current(props) {
             </div>
           </div>
         </div>
+        <Forecast coords={weatherData.coords} />
       </div>
     );
   } else {
