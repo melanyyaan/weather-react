@@ -7,13 +7,12 @@ function App() {
       <div className="container">
         <div className="box">
           <Current defaultCity="Cologne" />
-        
         </div>
         <p>
           <a
             href="https://github.com/melanyyaan/weather-react"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="code_link"
           >
             Open-source code
